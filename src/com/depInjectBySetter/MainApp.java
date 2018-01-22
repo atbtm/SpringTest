@@ -8,6 +8,7 @@ public class MainApp {
 		AbstractApplicationContext context = 
 		new ClassPathXmlApplicationContext("BeansTextEditor.xml");
 		TextEditor te = (TextEditor) context.getBean("textEditorBySetter");
+		System.out.println("SSSS");
 		te.spellCheck();
 	}
 }
