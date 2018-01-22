@@ -1,17 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-   <bean id="helloWorld" class="com.tutorialspoint.HelloWorld"
-   		init-method="init" destroy-method="destroy"  abstract="true">
-       <property name="message" value="Hello World!"/>
-   </bean>
-   <bean id="helloChildWorld" class="com.tutorialspoint.HelloChildWorld">
-       <property name="message" value="Hello Child World!"/>
-   </bean>
-   <bean class="com.tutorialspoint.InitHelloWorld" />
+	<bean id="textEditor" class="com.beanAutowire.TextEditor"
+		autowire="byType">
+		<property name="name" value="Generic Text Editor" />
+	</bean>
+	<bean id="ss" class="com.depInjectByConstr.SpellChecker">
+	</bean>
+	<bean id="tokenizer" class="com.beanAutowire.Tokenizer">
+	</bean>
+
+	<bean id="helloWorld" class="com.tutorialspoint.HelloWorld"
+		init-method="init" destroy-method="destroy" abstract="true">
+		<property name="message" value="Hello World!" />
+	</bean>
+	<bean id="helloChildWorld" class="com.tutorialspoint.HelloChildWorld">
+		<property name="message" value="Hello Child World!" />
+	</bean>
+	<bean id="javaCollection" class="com.collectionInj.JavaCollection">
+		<property name="addressList">
+			<list>
+				<value>US</value>
+				<value>USA</value>
+				<value>CN</value>
+			</list>
+		</property>
+		<property name="addressSet">
+			<list>
+				<value>US</value>
+				<value>USA</value>
+				<value>CN</value>
+			</list>
+		</property>
+		<property name="addressProp">
+			<props>
+				<prop key="one">INDIA</prop>
+				<prop key="two">Pakistan</prop>
+				<prop key="three">USA</prop>
+				<prop key="four">USA</prop>
+			</props>
+		</property>
+	</bean>
 
 </beans>
