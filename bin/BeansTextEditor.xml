@@ -7,7 +7,7 @@
 
 	<!-- Definition for textEditor bean -->
 	<bean id="textEditor" class="com.depInjectByConstr.TextEditor">
-		<constructor-arg ref="spellChecker" />
+		<constructor-arg ref="spellChecker2" />
 	</bean>
 
 	<bean id="textEditorBySetter" class="com.depInjectBySetter.TextEditor">
@@ -19,7 +19,7 @@
 
 
 	<!-- Definition for spellChecker bean -->
-	<bean id="spellChecker" class="com.depInjectByConstr.SpellChecker">
+	<bean id="spellChecker2" class="com.depInjectByConstr.SpellChecker">
 	</bean>
 
 </beans>
