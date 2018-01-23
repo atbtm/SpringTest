@@ -16,6 +16,21 @@
 
       <!-- try without passing age and check the result -->
       <!-- property name="age"  value="11"-->
+      <property name="age"  value="11"></property>
+   </bean>
+   
+   <bean id="profile" class="com.wireByAnnotation.autoWire.Profile">
+   </bean>
+   
+   <bean id="student1" class="com.wireByAnnotation.autoWire.Student">
+      <property name="name"  value="Zara" />
+      <property name="age"  value="11"/>
+   </bean>
+
+   <!-- Definition for student2 bean -->
+   <bean id="student2" class="com.wireByAnnotation.autoWire.Student">
+      <property name="name"  value="Nuha" />
+      <property name="age"  value="2"/>
    </bean>
 
 </beans>
